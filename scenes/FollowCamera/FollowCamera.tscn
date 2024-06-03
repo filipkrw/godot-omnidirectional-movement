@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://df8yenq8ops1l"]
+
+[ext_resource type="Script" path="res://scenes/FollowCamera/FollowCamera.cs" id="1_5y8to"]
+
+[node name="FollowCamera" type="Camera3D"]
+transform = Transform3D(1, -5.6448e-16, 2.74097e-16, 3.04748e-16, 0.818701, 0.57422, -5.48539e-16, -0.57422, 0.818701, -1.45547, 9.81017, 10.5929)
+fov = 38.0
+size = 9.306
+script = ExtResource("1_5y8to")

@@ -1,0 +1,111 @@
+[gd_scene load_steps=12 format=3 uid="uid://c0kf6ujvso7yy"]
+
+[ext_resource type="PackedScene" uid="uid://dl6p215vu68pl" path="res://scenes/Mannequin/Mannequin.tscn" id="3_fro6w"]
+[ext_resource type="PackedScene" uid="uid://bcqyjqaoqo070" path="res://scenes/BlendTreeDebug/BlendTreeDebug.tscn" id="3_q553p"]
+[ext_resource type="PackedScene" uid="uid://df8yenq8ops1l" path="res://scenes/FollowCamera/FollowCamera.tscn" id="4_ovy7i"]
+[ext_resource type="Material" uid="uid://bu5ngtc2cwfao" path="res://assets/materials/orb.tres" id="5_0mr8o"]
+
+[sub_resource type="Environment" id="Environment_tk6cv"]
+glow_intensity = 7.46
+fog_light_energy = 5.67
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.01
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_vl70g"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d0t6a"]
+albedo_color = Color(0.680951, 0.879391, 1, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_bt6ff"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_5o7uj"]
+material = ExtResource("5_0mr8o")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_086ld"]
+transparency = 1
+albedo_color = Color(0, 0, 0, 0.337255)
+emission = Color(0.989844, 2.72868e-06, 3.23736e-08, 1)
+emission_energy_multiplier = 9.87
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_ynop4"]
+material = SubResource("StandardMaterial3D_086ld")
+top_radius = 0.2
+bottom_radius = 0.2
+height = 0.001
+
+[node name="Main" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_tk6cv")
+
+[node name="FollowCamera" parent="." node_paths=PackedStringArray("_followTarget") instance=ExtResource("4_ovy7i")]
+transform = Transform3D(1, -5.6448e-16, 2.74097e-16, 3.04748e-16, 0.818701, 0.57422, -5.48539e-16, -0.57422, 0.818701, 2.08165e-12, 8.46, 10.593)
+fov = 40.3
+_followTarget = NodePath("../Mannequin")
+
+[node name="Light" type="Node3D" parent="."]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Light"]
+transform = Transform3D(0.936599, -0.246963, 0.24858, -8.89427e-17, 0.709411, 0.704795, -0.350404, -0.66011, 0.664433, 2.08165e-12, 18.5942, 10.0287)
+light_energy = 1.2
+light_indirect_energy = 4.083
+shadow_enabled = true
+shadow_opacity = 0.4
+directional_shadow_split_1 = 0.216
+directional_shadow_split_2 = 0.286
+directional_shadow_fade_start = 0.0
+
+[node name="Floor" type="Node3D" parent="."]
+transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, 0, 0, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Floor"]
+mesh = SubResource("PlaneMesh_vl70g")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_d0t6a")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Floor"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor/StaticBody3D"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 2.08165e-12, -1, 2.08165e-12)
+shape = SubResource("BoxShape3D_bt6ff")
+
+[node name="BlendTreeDebug" parent="." node_paths=PackedStringArray("character") instance=ExtResource("3_q553p")]
+visible = false
+character = NodePath("../Mannequin")
+
+[node name="Mannequin" parent="." node_paths=PackedStringArray("floor", "marker") instance=ExtResource("3_fro6w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 2.08165e-12, 2.08165e-12)
+floor = NodePath("../Floor/StaticBody3D")
+marker = NodePath("../Marker")
+
+[node name="Orbs" type="Node3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Orbs"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.73615, 1.21828, 1.39715)
+mesh = SubResource("SphereMesh_5o7uj")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Orbs"]
+transform = Transform3D(2.37, 0, 0, 0, 2.37, 0, 0, 0, 2.37, 7.5178, 1.54, -6)
+mesh = SubResource("SphereMesh_5o7uj")
+skeleton = NodePath("../MeshInstance3D")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="Orbs"]
+transform = Transform3D(5.76, 0, 0, 0, 5.76, 0, 0, 0, 5.76, -11.4148, 2.56397, 6.4322)
+mesh = SubResource("SphereMesh_5o7uj")
+skeleton = NodePath("../MeshInstance3D")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="Orbs"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.08, 1.6, -12)
+mesh = SubResource("SphereMesh_5o7uj")
+skeleton = NodePath("../MeshInstance3D")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="Orbs"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.73, 1.13, -6.07)
+mesh = SubResource("SphereMesh_5o7uj")
+skeleton = NodePath("../MeshInstance3D")
+
+[node name="Marker" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.999946, 0.0103671, 0, -0.0103671, 0.999946, 2.08165e-12, 2.08165e-12, 2.08165e-12)
+mesh = SubResource("CylinderMesh_ynop4")
+
+[editable path="FollowCamera"]

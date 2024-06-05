@@ -1,11 +1,10 @@
-
 Some time ago I posted a video of my omnidirectional movement demo in Godot on Reddit:
 
 https://github.com/filipkrw/godot-omnidirectional-movement/assets/34350914/e0c4ec87-f50d-4c54-98f2-20b1e1c2df21
 
 People seemed to like it and were interested to learn how I made it – hence this repo. Unfortunately, while the model and animations I used (sourced from [Mixamo](https://www.mixamo.com/)) are free to use, they are not free to redistribute.
 
-That's why they are not included in this repo (all the `.blend` files are empty) and instead what you get is a guide on where to get them, and how to tweak them to make the demo work. Which might be good since you might learn more that way.
+That's why they are not included in this repo (all the `.blend` files are empty) and instead what you get is a guide on where to get them, and how to tweak them to make the demo work. Which might be even better since the best way to learn something is to do it.
 
 Feel free create a GitHub issue or send me an email at filipkrw@protonmail.com if you have any questions.
 
@@ -80,7 +79,7 @@ Here are the correct download settings for the animations. Select "In Place" and
 - `jog-backward-right.blend` – https://www.mixamo.com/#/?page=1&query=jog+diagonal+backward+right&type=Motion%2CMotionPack (trim -50 to 50)
 - `jog-backward-left.blend` – https://www.mixamo.com/#/?page=1&query=jog+diagonal+backward+right&type=Motion%2CMotionPack (mirror)
 
-Import them into Godot.
+Import them into Blender, stretch to 2 seconds, and import them into Godot.
 
 # The game
 

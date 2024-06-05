@@ -1,5 +1,4 @@
 
-https://github.com/filipkrw/godot-omnidirectional-movement/assets/34350914/e4867838-517d-44c1-beb2-cb02287515fe
 Some time ago I posted a video of my omnidirectional movement demo in Godot:
 
 https://github.com/filipkrw/godot-omnidirectional-movement/assets/34350914/e0c4ec87-f50d-4c54-98f2-20b1e1c2df21

@@ -1,5 +1,5 @@
 
-Some time ago I posted a video of my omnidirectional movement demo in Godot:
+Some time ago I posted a video of my omnidirectional movement demo in Godot on Reddit:
 
 https://github.com/filipkrw/godot-omnidirectional-movement/assets/34350914/e0c4ec87-f50d-4c54-98f2-20b1e1c2df21
 

@@ -1,6 +1,8 @@
+
+https://github.com/filipkrw/godot-omnidirectional-movement/assets/34350914/e4867838-517d-44c1-beb2-cb02287515fe
 Some time ago I posted a video of my omnidirectional movement demo in Godot:
 
-`video here`
+https://github.com/filipkrw/godot-omnidirectional-movement/assets/34350914/e0c4ec87-f50d-4c54-98f2-20b1e1c2df21
 
 People seemed to like it and were interested to learn how I made it – hence this repo. Unfortunately, while the model and animations I used (sourced from [Mixamo](https://www.mixamo.com/)) are free to use, they are not free to redistribute.
 
@@ -24,7 +26,7 @@ Get the model from Mixamo. I used [Y Bot](https://www.mixamo.com/#/?page=1&query
 
 Open the empty `assets/models/mannequin.blend` file in Blender, import the FBX model, delete the animation and save it.
 
-`video here`
+https://github.com/filipkrw/godot-omnidirectional-movement/assets/34350914/2f900954-b8f8-43a4-bdfb-507b14f3214e
 
 You should be able to open the scenes now.
 
@@ -40,11 +42,11 @@ Mixamo won't let me link to a specific animation so here's a link to filtered se
 
 Open `assets/animations/idle.blend` file, import the FBX animation and save it. I also rename the animations to make it easier to work with them inside Godot, but that's not strictly necessary.
 
-`video here`
+https://github.com/filipkrw/godot-omnidirectional-movement/assets/34350914/a2f094df-dfed-47d3-8a6a-b6a2110c97d1
 
 In Godot, double click `assets/animations/idle.blend` file and reimport the animation as a spearate file: `assets/animations/idle.res`. Next, add the animation to the `AnimationPlayer` in `Mannequin.tscn` scene and enable animation looping.
 
-`video here`
+https://github.com/filipkrw/godot-omnidirectional-movement/assets/34350914/e3ce6220-8955-4d65-a76e-3ead71701f45
 
 ## Running and strafing
 
@@ -59,7 +61,7 @@ They all need to be stretched in Blender to be exactly 2 seconds long or the won
 
 Open the corresponding Blender files, import FBX animations and rename them if you wish. Next, **hover over the Timeline panel on the bottom** (very important to actually hover over the panel), press A to select all frames, press S for scale, and drag your mouse to the right until the last keyframe is on the 60th frame.
 
-`video here`
+https://github.com/filipkrw/godot-omnidirectional-movement/assets/34350914/0b9ffeec-a1cf-4b47-b1aa-565b08a71d39
 
 Repeat for all animations in the list and import them into Godot like the idle animations.
 
@@ -85,11 +87,11 @@ Import them into Godot.
 
 You should now be able to have a play with the BlendSpace2D responsible for the animation blending. If that works, go ahead and run the project.
 
-`video here`
+https://github.com/filipkrw/godot-omnidirectional-movement/assets/34350914/c14f28c1-e6b9-466b-8ccd-c65acfe94142
 
 ## Bonus: turn animations
 
-You may notice that the mannequin slides when rotated in place. Turn animations need a bit more tweaking. I'll update this section soon with the instructions.
+You may have noticed that the mannequin slides when rotated in place. Turn animations need a bit more tweaking. I'll update this section soon with the instructions.
 
 For now, here are the links to the animations so you can try to figure it out yourself:
 

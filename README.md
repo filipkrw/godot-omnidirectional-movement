@@ -34,7 +34,7 @@ We'll need to set-up 9 animations.
 
 ## Idle
 
-Mixamo won't let me link to a specific animation so here's a link to filtered search results: https://www.mixamo.com/#/?page=1&query=Idle&type=Motion%2CMotionPack. Download the sensible looking idle animation (should be in the second row) using these settings:
+Mixamo won't let me link to a specific animation so here's a link to filtered search results: https://www.mixamo.com/#/?page=1&query=Idle&type=Motion%2CMotionPack. Download the sensible looking idle animation (should be in first or second row) using these settings:
 
 ![Animation download](media/3-animation-download.png)
 
@@ -51,7 +51,7 @@ https://github.com/filipkrw/godot-omnidirectional-movement/assets/34350914/e3ce6
 Download the animations below. Select the "In place" checkbox when available and use the same download settings as before.
 
 - `running.blend` – https://www.mixamo.com/#/?page=1&query=running+with+intention&type=Motion%2CMotionPack
-- `running-back.blend` – https://mixamo.com/#/?page=1&query=running+backward&type=Motion%2CMotionPack (should be the first one)
+- `running-back.blend` – https://www.mixamo.com/#/?page=1&query=running+backward&type=Motion%2CMotionPack (should be the first one)
 - `right-strafe.blend` – https://www.mixamo.com/#/?page=1&query=running+strafe+to+the+right&type=Motion%2CMotionPack
 - `left-strafe.blend` – https://www.mixamo.com/#/?page=1&query=running+strafe+to+the+left&type=Motion%2CMotionPack (should be the second one)
 

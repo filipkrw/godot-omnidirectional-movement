@@ -12,7 +12,7 @@ Feel free create a GitHub issue or send me an email at filipkrw@protonmail.com i
 
 This is a C# Godot project so you'll need to get the correct Godot version. There's not much code so you should be able to translate it easily to GDScript if you prefer it. ChatGPT can probably be able to do that for you.
 
-You'll also need Blender to tweak the assets slightly.
+You'll also need Blender to tweak the assets.
 
 # The model
 

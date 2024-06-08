@@ -61,7 +61,7 @@ Open the corresponding Blender files, import FBX animations and rename them if y
 
 https://github.com/filipkrw/godot-omnidirectional-movement/assets/34350914/0b9ffeec-a1cf-4b47-b1aa-565b08a71d39
 
-Repeat for all animations in the list and import them into Godot like the idle animations.
+Repeat for all animations in the list and import them into Godot like the idle animation.
 
 ## Diagonals
 

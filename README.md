@@ -68,7 +68,7 @@ Repeat for all animations in the list and import them into Godot like the idle a
 Diagonal animations are a bit more tricky for two reasons:
 
 1. Only the forward-left and backward-right animations in Mixamo are set-up correctly. Their opposites don't respect the "In place" setting – they slide in a weird way.
-2. animations start on the left foot when the rest of the animations start on the right one.
+2. They start on the left foot when the rest of the animations start on the right one.
 
 We can remedy the first problem by mirroring the animations to get the front-right and the backward-left, and the second one by trimming the animations so they start on the right foot using the trim slider in Mixamo download settings.
 
